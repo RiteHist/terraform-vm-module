@@ -12,7 +12,7 @@ output "vm-info" {
 output "vm-network" {
     value = [
         for instance in yandex_compute_instance.instance : {
-            name = instance.var.name
+            name = instance.name
             fqdn = instance.fqdn
             public_ip = instance.network_interface[0].nat_ip_address
             private_ip = instance.network_interface[0].ipv4
