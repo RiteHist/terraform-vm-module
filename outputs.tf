@@ -15,7 +15,7 @@ output "vm-network" {
             name = instance.name
             fqdn = instance.fqdn
             public_ip = instance.network_interface[0].nat_ip_address
-            private_ip = instance.network_interface[0].ipv4
+            private_ip = instance.network_interface[0].ip_address
         }
     ]
 }
